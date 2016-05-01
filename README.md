@@ -1,11 +1,11 @@
 #Nome: 
 	## Projeto Biblioteca - Estacio de Sá.
 #Autor:
-	## Joabe G. Q. Kachorroski. :+1:
+	## Joabe G. Q. Kachorroski.
 #Data:
 	## 06/05/2016 
 #Versao:
-	## Projeto esta na Versão 0.1 :+1:
+	## Projeto esta na Versão 0.1.
 
 #Descrição 
 

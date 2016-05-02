@@ -72,28 +72,28 @@
 						<label class="col-sm-2 control-label">Titulo: </label>
 						<div class="col-md-8">
 							<input type='text' name='titulo' value='${livro.titulo}' class="form-control"
-								placeholder="Digite o Titulo">
+								placeholder="Digite o Titulo" data-error="Por favor, informe um titulo." required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Descrição: </label>
 						<div class="col-md-8">
 							<input type='text' name='descricao' value='${livro.descricao}' class='form-control'
-								placeholder="Digite a descrição">
+								placeholder="Digite a descrição" data-error="Por favor, informe a descrição." required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Ano de Lançamento: </label>
 						<div class="col-md-8">
 							<input type='text' name='anolancamento'  value='${livro.anoLancamento}'
-								class='form-control' placeholder="Ano">
+								class='form-control' placeholder="Ano" required>
 						</div>
 					</div>
 					
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Genero: </label>
 						<div class="col-md-8">
-							<select class="selectpicker" name="idGenero">
+							<select class="selectpicker" name="idGenero" >
 							<option selected="selected"> Selecione um Genero</option>
 							<c:forEach items="${listaGenero}" var="genero">
 								<option value="${genero.id}"
@@ -107,7 +107,7 @@
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Autor: </label>
 						<div class="col-md-8">
-							<select class="selectpicker" name="idAutor">
+							<select class="selectpicker" name="idAutor" >
 							<option selected="selected"> Selecione um Autor</option>
 							<c:forEach items="${listaAutor}" var="autor">
 								<option value="${autor.id}"

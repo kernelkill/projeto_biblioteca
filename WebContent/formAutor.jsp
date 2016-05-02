@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css"
 	href="bootstrap/css/bootstrap.min.css">
 <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap/js/validator.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
@@ -62,7 +63,7 @@
 			<h1 align="center">Cadastrar Autor</h1>
 			<div align="left" class="span6">
 				<br> <br>
-				<form class="form-horizontal" method='post'
+				<form class="form-horizontal"  data-toggle="validator" method='post'
 					action='/biblioteca/servlet'>
 					<input type='hidden' name='acao' value='GravarAutor'> <input
 						type='hidden' name='id' value='${autor.id }'>
@@ -71,14 +72,15 @@
 						<label class="col-sm-2 control-label">Nome: </label>
 						<div class="col-md-8">
 							<input type='text' name='nome' value='${autor.nome}'
-								class="form-control" placeholder="Digite seu nome">
+								class="form-control" placeholder="Digite seu nome" data-error="Por favor, informe um nome." required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Email: </label>
 						<div class="col-md-8">
-							<input type='text' name='email' value='${autor.email}'
-								class='form-control' placeholder="Digite seu email">
+							<input type='email' name='email' value='${autor.email}'
+								class='form-control' placeholder="Digite seu email" data-error="Por favor, informe um e-mail correto." required>
+								<div class="help-block with-errors"></div>
 						</div>
 					</div>
 					<div class="form-group">

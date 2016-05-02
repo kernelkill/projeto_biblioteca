@@ -72,7 +72,7 @@
 						<label class="col-sm-2 control-label">Descrição: </label>
 						<div class="col-md-8">
 							<input type='text' name='descricao' value='${genero.descricao}'
-								class="form-control" placeholder="Digite a descricao">
+								class="form-control" placeholder="Digite a descricao" data-error="Por favor, informe uma descrição." required>
 						</div>
 					</div>
 					<div class="form-group">

@@ -55,9 +55,9 @@
 						</ul></li>
 					<form  class="navbar-form nav  navbar-right" role="search" method='post'
 					action='/biblioteca/servlet' >
-					<input type='hidden' name='acao' value='PesquisarAutor'>
+					<input type='hidden' name='acao'   value='PesquisarAutor'>
 						<div class="form-group">
-							<input type="text" value="${pesquisar}" class="form-control" placeholder="Pesquisar">
+							<input type="text" name="pesquisar"  value="${pesquisar}" class="form-control" placeholder="Pesquisar">
 						</div>
 						<button type="submit" class="btn btn-default">Pesquisar</button>
 					</form>

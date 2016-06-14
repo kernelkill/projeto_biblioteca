@@ -85,7 +85,7 @@
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Ano de Lançamento: </label>
 						<div class="col-md-8">
-							<input type='text' name='anolancamento'  value='${livro.anoLancamento}'
+							<input style="width: 200px" type='text' name='anolancamento'  value='${livro.anoLancamento}'
 								class='form-control' placeholder="Ano" required>
 						</div>
 					</div>

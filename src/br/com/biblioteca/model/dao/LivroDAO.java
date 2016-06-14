@@ -114,4 +114,22 @@ public class LivroDAO {
 			e.printStackTrace();
 		}
 	}
+
+	public List<Livro> getPesquisar(String pesquisar) {
+		List<Livro> livros = new ArrayList<>();
+		try{
+			PreparedStatement preparedst = conexao.prepareStatement(" select * from livro where upper(titulo) like upper(?)");
+			preparedst.setString(1, "%" + pesquisar + "%");
+			ResultSet st = preparedst.executeQuery();
+			Livro livro = null;
+			while (st.next()) {
+				livro = getLivro(st);
+				livros.add(livro);
+			}
+			preparedst.close();
+		}catch(Exception error){
+			error.printStackTrace();
+		}
+		return livros;
+	}
 }

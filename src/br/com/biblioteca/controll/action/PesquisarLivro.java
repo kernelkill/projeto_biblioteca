@@ -18,14 +18,14 @@ public class PesquisarLivro implements Action{
 			livroDAO = new LivroDAO(Conexao.getConnection());
 			
 			List<Livro> livros = new ArrayList<>();
-			livros = livroDAO.getPesquisar(request.getParameter("Pesquisar"));
+			livros = livroDAO.getPesquisar(request.getParameter("pesquisar"));
 			
 			request.setAttribute("lista", livros);
+			
+			return "listaLivro.jsp";
 		}catch(Exception error){
 			error.printStackTrace();
 		}
 		return "erro.jsp";
 	}
-	
-
 }

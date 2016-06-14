@@ -53,9 +53,12 @@
 							<li><a href="/biblioteca/servlet?acao=InserirAutor">Cadastrar</a></li>
 							<li><a href="/biblioteca/servlet?acao=ListarAutor">Listar</a></li>
 						</ul></li>
-					<form class="navbar-form nav  navbar-right" role="search">
+					<form class="navbar-form nav  navbar-right" role="search"
+						method='post' action='/biblioteca/servlet'>
+						<input type='hidden' name='acao' value='PesquisarLivro'>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Pesquisar">
+							<input type="text" name="pesquisar" value="${pesquisar}"
+								class="form-control" placeholder="Pesquisar">
 						</div>
 						<button type="submit" class="btn btn-default">Pesquisar</button>
 					</form>
